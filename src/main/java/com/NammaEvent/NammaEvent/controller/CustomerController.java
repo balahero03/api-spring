@@ -20,8 +20,6 @@ public class CustomerController {
        return c.stream().filter(customer -> customer.getCustomerId()==id).toList();
     }
 
-
-
     @PostMapping("/create/customer")
     public void CreateCustomer(@RequestBody customer customer1){
         customer c = new customer();
