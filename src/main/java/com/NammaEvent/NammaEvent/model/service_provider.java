@@ -7,6 +7,7 @@ import java.math.BigInteger;
 @Entity
 @Table(name = "service_provider")
 public class service_provider {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "service_provider_id")
     private int service_provider_id;
