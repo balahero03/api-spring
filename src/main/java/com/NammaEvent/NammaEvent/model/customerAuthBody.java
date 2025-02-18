@@ -28,4 +28,6 @@ public class customerAuthBody {
     public void setcustomerpassword(String customerpassword) {
         this.customerpassword = customerpassword;
     }
+
+
 }

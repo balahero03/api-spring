@@ -30,7 +30,13 @@ public class AuthController {
     @PostMapping("/customer/login")
     public ResponseEntity<?>  createAuthenticationToken(@RequestBody customerAuthBody customerAuthBody) throws Exception{
         try{
+            System.out.println("Username: " + customerAuthBody.getcustomeremailid());
+            System.out.println("Password: " + customerAuthBody.getcustomerpassword());
+
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(customerAuthBody.getcustomeremailid(),customerAuthBody.getcustomerpassword()));
+
+            System.out.println("Username: " + customerAuthBody.getcustomeremailid());
+            System.out.println("Password: " + customerAuthBody.getcustomerpassword());
         } catch (Exception e) {
             throw new Exception("INCORRECT USERNAME OR PASSWORD" + e);
         }
